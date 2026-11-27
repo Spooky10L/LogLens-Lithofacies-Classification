@@ -1,0 +1,10 @@
+{
+  "n_las_files": 118,
+  "n_parsed": 118,
+  "parse_errors": [],
+  "n_wells_with_label_curve": 118,
+  "n_wells_without_label_curve": 0,
+  "n_wells_with_label_curve_but_zero_labelled_rows": 0,
+  "total_depth_samples": 2337639,
+  "total_labelled_samples": 1431383
+}

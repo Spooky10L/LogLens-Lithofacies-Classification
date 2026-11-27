@@ -1,0 +1,37 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+models/*.joblib
+models/*.csv
+models/*.json
+data/force_las/
+data/force2020_prepared.csv
+data/*.zip
+data/processed/
+models/v1/*.joblib
+models/v1/*.csv.gz
+# --- added for GitHub readiness ---
+.DS_Store
+*.joblib
+*.las
+*.LAS
+data/raw/
+data/force_las/
+data/processed/
+models_demo/
+.streamlit/secrets.toml
+.ipynb_checkpoints/
+models/v1_smoke/
+
+# --- kept local only (private / superseded documents) ---
+docs/INTERVIEW_NOTES.md
+docs/NEXT_STEPS.md
+docs/CV_ENTRY.md
+app_legacy.py
+
+# --- original training output kept locally; the publication-ready report replaces it ---
+# (it prints Basement as 0.0; PER_CLASS_REPORT.md marks it "not scorable")
+models/v1/per_class_metrics_random_forest.csv
+models/v1/per_class_metrics_dummy_most_frequent.csv
+models/v1/per_class_metrics_dummy_stratified.csv

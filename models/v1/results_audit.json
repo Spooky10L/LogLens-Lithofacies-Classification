@@ -1,0 +1,132 @@
+{
+  "wells": {
+    "n_train": 94,
+    "n_val": 24,
+    "overlap": [],
+    "validation_csv_wells_equal_val_list": true
+  },
+  "models": {
+    "dummy_most_frequent": {
+      "recomputed": {
+        "accuracy": 0.666158887300868,
+        "balanced_accuracy": 0.09090909090909091,
+        "macro_f1": 0.07269402613053169,
+        "weighted_f1": 0.5326834871658873,
+        "n_classes_scored": 11
+      },
+      "saved_in_metrics_json": {
+        "accuracy": 0.666158887300868,
+        "balanced_accuracy": 0.09090909090909091,
+        "macro_f1": 0.07269402613053169,
+        "weighted_f1": 0.5326834871658873,
+        "n_classes_scored": 11
+      },
+      "max_abs_difference": 0.0,
+      "predicted_classes_absent_from_y_true": {}
+    },
+    "dummy_stratified": {
+      "recomputed": {
+        "accuracy": 0.43454177850594344,
+        "balanced_accuracy": 0.09097701886668395,
+        "macro_f1": 0.09011477937132761,
+        "weighted_f1": 0.4508254009466247,
+        "n_classes_scored": 11
+      },
+      "saved_in_metrics_json": {
+        "accuracy": 0.43454177850594344,
+        "balanced_accuracy": 0.09097701886668395,
+        "macro_f1": 0.09011477937132763,
+        "weighted_f1": 0.4508254009466247,
+        "n_classes_scored": 11
+      },
+      "max_abs_difference": 1.3877787807814457e-17,
+      "predicted_classes_absent_from_y_true": {
+        "93000": {
+          "name": "Basement",
+          "n_rows_predicted": 24
+        }
+      }
+    },
+    "random_forest": {
+      "recomputed": {
+        "accuracy": 0.6786070345452644,
+        "balanced_accuracy": 0.4346399990150378,
+        "macro_f1": 0.4220234513752803,
+        "weighted_f1": 0.6924333380719229,
+        "n_classes_scored": 11
+      },
+      "saved_in_metrics_json": {
+        "accuracy": 0.6786070345452644,
+        "balanced_accuracy": 0.4346399990150378,
+        "macro_f1": 0.42202345137528036,
+        "weighted_f1": 0.6924333380719228,
+        "n_classes_scored": 11
+      },
+      "max_abs_difference": 1.1102230246251565e-16,
+      "predicted_classes_absent_from_y_true": {}
+    }
+  },
+  "top_confusions_random_forest": [
+    {
+      "true": "Shale",
+      "predicted": "Sandstone/Shale",
+      "n": 26533,
+      "share_of_true_class": 0.139
+    },
+    {
+      "true": "Shale",
+      "predicted": "Sandstone",
+      "n": 10416,
+      "share_of_true_class": 0.055
+    },
+    {
+      "true": "Sandstone/Shale",
+      "predicted": "Shale",
+      "n": 9908,
+      "share_of_true_class": 0.372
+    },
+    {
+      "true": "Shale",
+      "predicted": "Marl",
+      "n": 4703,
+      "share_of_true_class": 0.025
+    },
+    {
+      "true": "Sandstone/Shale",
+      "predicted": "Sandstone",
+      "n": 4613,
+      "share_of_true_class": 0.173
+    },
+    {
+      "true": "Halite",
+      "predicted": "Limestone",
+      "n": 4127,
+      "share_of_true_class": 0.961
+    },
+    {
+      "true": "Sandstone",
+      "predicted": "Sandstone/Shale",
+      "n": 3881,
+      "share_of_true_class": 0.115
+    },
+    {
+      "true": "Sandstone",
+      "predicted": "Shale",
+      "n": 3481,
+      "share_of_true_class": 0.103
+    },
+    {
+      "true": "Limestone",
+      "predicted": "Sandstone",
+      "n": 2430,
+      "share_of_true_class": 0.166
+    },
+    {
+      "true": "Limestone",
+      "predicted": "Shale",
+      "n": 2195,
+      "share_of_true_class": 0.15
+    }
+  ],
+  "explanation_of_warning": "sklearn warns 'y_pred contains classes not in y_true' when a model predicts a class that has no validation samples. Only dummy_stratified does this (it samples classes from the training prior, including Basement, which exists in one training well and no validation well). RandomForest and dummy_most_frequent never predict an absent class. Basement is reported as NOT SCORABLE, not as a 0.0 score, and is excluded only from the macro averages' denominator, which is stated alongside every headline number."
+}

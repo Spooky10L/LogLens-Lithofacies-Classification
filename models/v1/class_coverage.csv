@@ -1,0 +1,13 @@
+class_code,class_name,train_samples,val_samples,train_wells,val_wells,wells_total,flags
+30000,Sandstone,173902,33802,94,24,118,
+65030,Sandstone/Shale,154166,26654,93,24,117,
+65000,Shale,685942,191101,94,24,118,
+80000,Marl,34314,6724,71,21,92,
+74000,Dolomite,2043,348,37,10,47,
+70000,Limestone,54859,14639,91,23,114,
+70032,Chalk,9473,4570,11,4,15,
+88000,Halite,10417,4295,3,1,4,RARE: in only 4 of 118 labelled wells
+86000,Anhydrite,1509,299,8,2,10,
+99000,Tuff,14209,3222,52,15,67,
+90000,Coal,3538,1216,51,12,63,
+93000,Basement,141,0,1,0,1,RARE: in only 1 of 118 labelled wells; ABSENT FROM VALIDATION: cannot be scored
